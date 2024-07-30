@@ -1,6 +1,4 @@
-# TaskLinq
-
-[![Docs](https://img.shields.io/badge/docs-wiki-blue.svg?style=for-the-badge)](https://github.com/robertcoltheart/task-linq/wiki) [![NuGet](https://img.shields.io/nuget/v/TaskLinq?style=for-the-badge)](https://www.nuget.org/packages/TaskLinq) [![Discussions](https://img.shields.io/badge/DISCUSS-ON%20GITHUB-yellow?style=for-the-badge)](https://github.com/robertcoltheart/task-linq/discussions) [![License](https://img.shields.io/github/license/robertcoltheart/task-linq?style=for-the-badge)](https://github.com/robertcoltheart/task-linq/blob/master/LICENSE)
+﻿## About
 
 A thing that does something.
 
@@ -21,6 +19,3 @@ Discuss with us on [Discussions](https://github.com/robertcoltheart/task-linq/di
 
 ## Contributing
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this project.
-
-## License
-TaskLinq is released under the [MIT License](LICENSE)
