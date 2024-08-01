@@ -2,19 +2,19 @@
 
   <PropertyGroup>
     <Version>1.0.0</Version>
-    <TargetFrameworks>netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net8.0</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
     <Authors>robertcoltheart</Authors>
-    <Description>A thing that does something</Description>
+    <Description>Extension methods to use Language-Integrated Query (LINQ) on Task enumerable objets</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/robertcoltheart/task-linq</PackageProjectUrl>
     <RepositoryUrl>https://github.com/robertcoltheart/task-linq</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags></PackageTags>
+    <PackageTags>task linq async await extensions</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
