@@ -13,7 +13,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Aggregate(func);
+        return (await source.ConfigureAwait(false)).Aggregate(func);
     }
 
     /// <inheritdoc cref="Enumerable.Aggregate{TSource,TAccumulate}(IEnumerable{TSource},TAccumulate,Func{TAccumulate,TSource,TAccumulate})" />
@@ -25,7 +25,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Aggregate(seed, func);
+        return (await source.ConfigureAwait(false)).Aggregate(seed, func);
     }
 
     /// <inheritdoc cref="Enumerable.Aggregate{TSource,TAccumulate,TResult}(IEnumerable{TSource},TAccumulate,Func{TAccumulate,TSource,TAccumulate},Func{TAccumulate,TResult})" />
@@ -38,7 +38,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Aggregate(seed, func, resultSelector);
+        return (await source.ConfigureAwait(false)).Aggregate(seed, func, resultSelector);
     }
 
     /// <inheritdoc cref="Enumerable.Any{TSource}(IEnumerable{TSource})" />
@@ -48,7 +48,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Any();
+        return (await source.ConfigureAwait(false)).Any();
     }
 
     /// <inheritdoc cref="Enumerable.Any{TSource}(IEnumerable{TSource},Func{TSource,bool})" />
@@ -59,7 +59,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Any(predicate);
+        return (await source.ConfigureAwait(false)).Any(predicate);
     }
 
     /// <inheritdoc cref="Enumerable.All{TSource}(IEnumerable{TSource},Func{TSource,bool})" />
@@ -70,7 +70,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).All(predicate);
+        return (await source.ConfigureAwait(false)).All(predicate);
     }
 
     /// <inheritdoc cref="Enumerable.Append{TSource}(IEnumerable{TSource},TSource)" />
@@ -81,7 +81,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Append(element);
+        return (await source.ConfigureAwait(false)).Append(element);
     }
 
     /// <inheritdoc cref="Enumerable.Prepend{TSource}(IEnumerable{TSource},TSource)" />
@@ -92,7 +92,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Prepend(element);
+        return (await source.ConfigureAwait(false)).Prepend(element);
     }
 
     /// <inheritdoc cref="Enumerable.Average(IEnumerable{int})" />
@@ -102,7 +102,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average();
+        return (await source.ConfigureAwait(false)).Average();
     }
 
     /// <inheritdoc cref="Enumerable.Average(IEnumerable{long})" />
@@ -112,7 +112,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average();
+        return (await source.ConfigureAwait(false)).Average();
     }
 
     /// <inheritdoc cref="Enumerable.Average(IEnumerable{float})" />
@@ -122,7 +122,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average();
+        return (await source.ConfigureAwait(false)).Average();
     }
 
     /// <inheritdoc cref="Enumerable.Average(IEnumerable{double})" />
@@ -132,7 +132,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average();
+        return (await source.ConfigureAwait(false)).Average();
     }
 
     /// <inheritdoc cref="Enumerable.Average(IEnumerable{decimal})" />
@@ -142,7 +142,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average();
+        return (await source.ConfigureAwait(false)).Average();
     }
 
     /// <inheritdoc cref="Enumerable.Average(IEnumerable{int?})" />
@@ -152,7 +152,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average();
+        return (await source.ConfigureAwait(false)).Average();
     }
 
     /// <inheritdoc cref="Enumerable.Average(IEnumerable{long?})" />
@@ -162,7 +162,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average();
+        return (await source.ConfigureAwait(false)).Average();
     }
 
     /// <inheritdoc cref="Enumerable.Average(IEnumerable{float?})" />
@@ -172,7 +172,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average();
+        return (await source.ConfigureAwait(false)).Average();
     }
 
     /// <inheritdoc cref="Enumerable.Average(IEnumerable{double?})" />
@@ -182,7 +182,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average();
+        return (await source.ConfigureAwait(false)).Average();
     }
 
     /// <inheritdoc cref="Enumerable.Average(IEnumerable{decimal?})" />
@@ -192,7 +192,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average();
+        return (await source.ConfigureAwait(false)).Average();
     }
 
     /// <inheritdoc cref="Enumerable.Average{TSource}(IEnumerable{TSource},Func{TSource,int})" />
@@ -203,7 +203,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average(selector);
+        return (await source.ConfigureAwait(false)).Average(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Average{TSource}(IEnumerable{TSource},Func{TSource,long})" />
@@ -214,7 +214,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average(selector);
+        return (await source.ConfigureAwait(false)).Average(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Average{TSource}(IEnumerable{TSource},Func{TSource,float})" />
@@ -225,7 +225,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average(selector);
+        return (await source.ConfigureAwait(false)).Average(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Average{TSource}(IEnumerable{TSource},Func{TSource,double})" />
@@ -236,7 +236,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average(selector);
+        return (await source.ConfigureAwait(false)).Average(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Average{TSource}(IEnumerable{TSource},Func{TSource,decimal})" />
@@ -247,7 +247,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average(selector);
+        return (await source.ConfigureAwait(false)).Average(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Average{TSource}(IEnumerable{TSource},Func{TSource,int?})" />
@@ -258,7 +258,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average(selector);
+        return (await source.ConfigureAwait(false)).Average(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Average{TSource}(IEnumerable{TSource},Func{TSource,long?})" />
@@ -269,7 +269,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average(selector);
+        return (await source.ConfigureAwait(false)).Average(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Average{TSource}(IEnumerable{TSource},Func{TSource,float?})" />
@@ -280,7 +280,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average(selector);
+        return (await source.ConfigureAwait(false)).Average(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Average{TSource}(IEnumerable{TSource},Func{TSource,double?})" />
@@ -291,7 +291,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average(selector);
+        return (await source.ConfigureAwait(false)).Average(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Average{TSource}(IEnumerable{TSource},Func{TSource,decimal?})" />
@@ -302,7 +302,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Average(selector);
+        return (await source.ConfigureAwait(false)).Average(selector);
     }
 
     /// <inheritdoc cref="Enumerable.OfType{TSource}(IEnumerable)" />
@@ -312,7 +312,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).OfType<TResult>();
+        return (await source.ConfigureAwait(false)).OfType<TResult>();
     }
 
     /// <inheritdoc cref="Enumerable.Cast{TResult}(IEnumerable)" />
@@ -322,7 +322,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Cast<TResult>();
+        return (await source.ConfigureAwait(false)).Cast<TResult>();
     }
 
 #if NET6_0_OR_GREATER
@@ -334,7 +334,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Chunk(size);
+        return (await source.ConfigureAwait(false)).Chunk(size);
     }
 #endif
 
@@ -357,7 +357,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Contains(value);
+        return (await source.ConfigureAwait(false)).Contains(value);
     }
 
     /// <inheritdoc cref="Enumerable.Contains{TSource}(IEnumerable{TSource},TSource,IEqualityComparer{TSource})" />
@@ -369,7 +369,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Contains(value, comparer);
+        return (await source.ConfigureAwait(false)).Contains(value, comparer);
     }
 
     /// <inheritdoc cref="Enumerable.Count{TSource}(IEnumerable{TSource})" />
@@ -379,7 +379,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Count();
+        return (await source.ConfigureAwait(false)).Count();
     }
 
     /// <inheritdoc cref="Enumerable.Count{TSource}(IEnumerable{TSource},Func{TSource,bool})" />
@@ -390,7 +390,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Count(predicate);
+        return (await source.ConfigureAwait(false)).Count(predicate);
     }
 
     ///// <inheritdoc cref="Enumerable.Count{TSource}(IEnumerable{TSource})" />
@@ -401,7 +401,7 @@ public static partial class TaskEnumerable
     //{
     //    cancellationToken.ThrowIfCancellationRequested();
 
-    //    return (await source);
+    //    return (await source.ConfigureAwait(false));
     //}
 
     /// <inheritdoc cref="Enumerable.LongCount{TSource}(IEnumerable{TSource})" />
@@ -411,7 +411,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).LongCount();
+        return (await source.ConfigureAwait(false)).LongCount();
     }
 
     /// <inheritdoc cref="Enumerable.LongCount{TSource}(IEnumerable{TSource},Func{TSource,bool})" />
@@ -422,7 +422,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).LongCount(predicate);
+        return (await source.ConfigureAwait(false)).LongCount(predicate);
     }
 
     /// <inheritdoc cref="Enumerable.DefaultIfEmpty{TSource}(IEnumerable{TSource})" />
@@ -432,7 +432,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).DefaultIfEmpty();
+        return (await source.ConfigureAwait(false)).DefaultIfEmpty();
     }
 
     /// <inheritdoc cref="Enumerable.DefaultIfEmpty{TSource}(IEnumerable{TSource},TSource)" />
@@ -443,7 +443,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).DefaultIfEmpty(defaultValue);
+        return (await source.ConfigureAwait(false)).DefaultIfEmpty(defaultValue);
     }
 
     /// <inheritdoc cref="Enumerable.Distinct{TSource}(IEnumerable{TSource})" />
@@ -453,7 +453,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Distinct();
+        return (await source.ConfigureAwait(false)).Distinct();
     }
 
     /// <inheritdoc cref="Enumerable.Distinct{TSource}(IEnumerable{TSource},IEqualityComparer{TSource})" />
@@ -464,7 +464,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Distinct(comparer);
+        return (await source.ConfigureAwait(false)).Distinct(comparer);
     }
 
 #if NET6_0_OR_GREATER
@@ -476,7 +476,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).DistinctBy(keySelector);
+        return (await source.ConfigureAwait(false)).DistinctBy(keySelector);
     }
 
     /// <inheritdoc cref="Enumerable.DistinctBy{TSource,TKey}(IEnumerable{TSource},Func{TSource,TKey},IEqualityComparer{TKey})" />
@@ -488,7 +488,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).DistinctBy(keySelector, comparer);
+        return (await source.ConfigureAwait(false)).DistinctBy(keySelector, comparer);
     }
 #endif
 
@@ -500,7 +500,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ElementAt(index);
+        return (await source.ConfigureAwait(false)).ElementAt(index);
     }
 
 #if NET6_0_OR_GREATER
@@ -512,7 +512,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ElementAt(index);
+        return (await source.ConfigureAwait(false)).ElementAt(index);
     }
 #endif
 
@@ -524,7 +524,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ElementAtOrDefault(index);
+        return (await source.ConfigureAwait(false)).ElementAtOrDefault(index);
     }
 
 #if NET6_0_OR_GREATER
@@ -536,7 +536,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ElementAtOrDefault(index);
+        return (await source.ConfigureAwait(false)).ElementAtOrDefault(index);
     }
 #endif
 
@@ -597,7 +597,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).First();
+        return (await source.ConfigureAwait(false)).First();
     }
 
     /// <inheritdoc cref="Enumerable.First{TSource}(IEnumerable{TSource},Func{TSource,bool})" />
@@ -608,7 +608,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).First(predicate);
+        return (await source.ConfigureAwait(false)).First(predicate);
     }
 
     /// <inheritdoc cref="Enumerable.FirstOrDefault{TSource}(IEnumerable{TSource})" />
@@ -618,7 +618,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).FirstOrDefault();
+        return (await source.ConfigureAwait(false)).FirstOrDefault();
     }
 
 #if NET6_0_OR_GREATER
@@ -630,7 +630,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).FirstOrDefault(defaultValue);
+        return (await source.ConfigureAwait(false)).FirstOrDefault(defaultValue);
     }
 #endif
 
@@ -642,7 +642,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).FirstOrDefault(predicate);
+        return (await source.ConfigureAwait(false)).FirstOrDefault(predicate);
     }
 
 #if NET6_0_OR_GREATER
@@ -655,7 +655,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).FirstOrDefault(predicate, defaultValue);
+        return (await source.ConfigureAwait(false)).FirstOrDefault(predicate, defaultValue);
     }
 #endif
 
@@ -667,7 +667,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).GroupBy(keySelector);
+        return (await source.ConfigureAwait(false)).GroupBy(keySelector);
     }
 
     /// <inheritdoc cref="Enumerable.GroupBy{TSource,TKey}(IEnumerable{TSource},Func{TSource,TKey},IEqualityComparer{TKey})" />
@@ -679,7 +679,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).GroupBy(keySelector, comparer);
+        return (await source.ConfigureAwait(false)).GroupBy(keySelector, comparer);
     }
 
     /// <inheritdoc cref="Enumerable.GroupBy{TSource,TKey,TElement}(IEnumerable{TSource},Func{TSource,TKey},Func{TSource,TElement})" />
@@ -691,7 +691,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).GroupBy(keySelector, elementSelector);
+        return (await source.ConfigureAwait(false)).GroupBy(keySelector, elementSelector);
     }
 
     /// <inheritdoc cref="Enumerable.GroupBy{TSource,TKey,TElement}(IEnumerable{TSource},Func{TSource,TKey},Func{TSource,TElement},IEqualityComparer{TKey})" />
@@ -704,7 +704,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).GroupBy(keySelector, elementSelector, comparer);
+        return (await source.ConfigureAwait(false)).GroupBy(keySelector, elementSelector, comparer);
     }
 
     /// <inheritdoc cref="Enumerable.GroupBy{TSource,TKey,TResult}(IEnumerable{TSource},Func{TSource,TKey},Func{TKey,IEnumerable{TSource},TResult})" />
@@ -716,7 +716,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).GroupBy(keySelector, resultSelector);
+        return (await source.ConfigureAwait(false)).GroupBy(keySelector, resultSelector);
     }
 
     /// <inheritdoc cref="Enumerable.GroupBy{TSource,TKey,TElement,TResult}(IEnumerable{TSource},Func{TSource,TKey},Func{TSource,TElement},Func{TKey,IEnumerable{TElement},TResult})" />
@@ -729,7 +729,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).GroupBy(keySelector, elementSelector, resultSelector);
+        return (await source.ConfigureAwait(false)).GroupBy(keySelector, elementSelector, resultSelector);
     }
 
     /// <inheritdoc cref="Enumerable.GroupBy{TSource,TKey,TResult}(IEnumerable{TSource},Func{TSource,TKey},Func{TKey,IEnumerable{TSource},TResult},IEqualityComparer{TKey})" />
@@ -742,7 +742,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).GroupBy(keySelector, resultSelector, comparer);
+        return (await source.ConfigureAwait(false)).GroupBy(keySelector, resultSelector, comparer);
     }
 
     /// <inheritdoc cref="Enumerable.GroupBy{TSource,TKey,TElement,TResult}(IEnumerable{TSource},Func{TSource,TKey},Func{TSource,TElement},Func{TKey,IEnumerable{TElement},TResult},IEqualityComparer{TKey})" />
@@ -756,7 +756,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).GroupBy(keySelector, elementSelector, resultSelector, comparer);
+        return (await source.ConfigureAwait(false)).GroupBy(keySelector, elementSelector, resultSelector, comparer);
     }
 
     /// <inheritdoc cref="Enumerable.GroupJoin{TOuter, TInner, TKey, TResult}(IEnumerable{TOuter},IEnumerable{TInner},Func{TOuter,TKey},Func{TInner,TKey},Func{TOuter,IEnumerable{TInner},TResult})" />
@@ -874,7 +874,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Last();
+        return (await source.ConfigureAwait(false)).Last();
     }
 
     /// <inheritdoc cref="Enumerable.Last{TSource}(IEnumerable{TSource},Func{TSource,bool})" />
@@ -885,7 +885,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Last(predicate);
+        return (await source.ConfigureAwait(false)).Last(predicate);
     }
 
     /// <inheritdoc cref="Enumerable.LastOrDefault{TSource}(IEnumerable{TSource})" />
@@ -895,7 +895,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).LastOrDefault();
+        return (await source.ConfigureAwait(false)).LastOrDefault();
     }
 
 #if NET6_0_OR_GREATER
@@ -907,7 +907,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).LastOrDefault(defaultValue);
+        return (await source.ConfigureAwait(false)).LastOrDefault(defaultValue);
     }
 #endif
 
@@ -919,7 +919,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).LastOrDefault(predicate);
+        return (await source.ConfigureAwait(false)).LastOrDefault(predicate);
     }
 
 #if NET6_0_OR_GREATER
@@ -932,7 +932,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).LastOrDefault(predicate, defaultValue);
+        return (await source.ConfigureAwait(false)).LastOrDefault(predicate, defaultValue);
     }
 #endif
 
@@ -944,7 +944,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ToLookup(keySelector);
+        return (await source.ConfigureAwait(false)).ToLookup(keySelector);
     }
 
     /// <inheritdoc cref="Enumerable.ToLookup{TSource,TKey}(IEnumerable{TSource},Func{TSource,TKey},IEqualityComparer{TKey})" />
@@ -956,7 +956,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ToLookup(keySelector, comparer);
+        return (await source.ConfigureAwait(false)).ToLookup(keySelector, comparer);
     }
 
     /// <inheritdoc cref="Enumerable.ToLookup{TSource,TKey,TElement}(IEnumerable{TSource},Func{TSource,TKey},Func{TSource,TElement})" />
@@ -968,7 +968,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ToLookup(keySelector, elementSelector);
+        return (await source.ConfigureAwait(false)).ToLookup(keySelector, elementSelector);
     }
 
     /// <inheritdoc cref="Enumerable.ToLookup{TSource,TKey,TElement}(IEnumerable{TSource},Func{TSource,TKey},Func{TSource,TElement},IEqualityComparer{TKey})" />
@@ -981,7 +981,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ToLookup(keySelector, elementSelector, comparer);
+        return (await source.ConfigureAwait(false)).ToLookup(keySelector, elementSelector, comparer);
     }
 
     /// <inheritdoc cref="Enumerable.Max(IEnumerable{int})" />
@@ -991,7 +991,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max();
+        return (await source.ConfigureAwait(false)).Max();
     }
 
     /// <inheritdoc cref="Enumerable.Max(IEnumerable{long})" />
@@ -1001,7 +1001,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max();
+        return (await source.ConfigureAwait(false)).Max();
     }
 
     /// <inheritdoc cref="Enumerable.Max(IEnumerable{int?})" />
@@ -1011,7 +1011,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max();
+        return (await source.ConfigureAwait(false)).Max();
     }
 
     /// <inheritdoc cref="Enumerable.Max(IEnumerable{long?})" />
@@ -1021,7 +1021,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max();
+        return (await source.ConfigureAwait(false)).Max();
     }
 
     /// <inheritdoc cref="Enumerable.Max(IEnumerable{double})" />
@@ -1031,7 +1031,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max();
+        return (await source.ConfigureAwait(false)).Max();
     }
 
     /// <inheritdoc cref="Enumerable.Max(IEnumerable{double?})" />
@@ -1041,7 +1041,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max();
+        return (await source.ConfigureAwait(false)).Max();
     }
 
     /// <inheritdoc cref="Enumerable.Max(IEnumerable{float})" />
@@ -1051,7 +1051,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max();
+        return (await source.ConfigureAwait(false)).Max();
     }
 
     /// <inheritdoc cref="Enumerable.Max(IEnumerable{float?})" />
@@ -1061,7 +1061,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max();
+        return (await source.ConfigureAwait(false)).Max();
     }
 
     /// <inheritdoc cref="Enumerable.Max(IEnumerable{decimal})" />
@@ -1071,7 +1071,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max();
+        return (await source.ConfigureAwait(false)).Max();
     }
 
     /// <inheritdoc cref="Enumerable.Max(IEnumerable{decimal?})" />
@@ -1081,7 +1081,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max();
+        return (await source.ConfigureAwait(false)).Max();
     }
 
     /// <inheritdoc cref="Enumerable.Max{TSource}(IEnumerable{TSource})" />
@@ -1091,7 +1091,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max();
+        return (await source.ConfigureAwait(false)).Max();
     }
 
 #if NET6_0_OR_GREATER
@@ -1103,7 +1103,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max(comparer);
+        return (await source.ConfigureAwait(false)).Max(comparer);
     }
 
     /// <inheritdoc cref="Enumerable.MaxBy{TSource,TKey}(IEnumerable{TSource},Func{TSource,TKey})" />
@@ -1114,7 +1114,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).MaxBy(keySelector);
+        return (await source.ConfigureAwait(false)).MaxBy(keySelector);
     }
 
     /// <inheritdoc cref="Enumerable.MaxBy{TSource,TKey}(IEnumerable{TSource},Func{TSource,TKey},IComparer{TKey}?)" />
@@ -1126,7 +1126,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).MaxBy(keySelector, comparer);
+        return (await source.ConfigureAwait(false)).MaxBy(keySelector, comparer);
     }
 #endif
 
@@ -1138,7 +1138,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max(selector);
+        return (await source.ConfigureAwait(false)).Max(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Max{TSource}(IEnumerable{TSource},Func{TSource,int?})" />
@@ -1149,7 +1149,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max(selector);
+        return (await source.ConfigureAwait(false)).Max(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Max{TSource}(IEnumerable{TSource},Func{TSource,long})" />
@@ -1160,7 +1160,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max(selector);
+        return (await source.ConfigureAwait(false)).Max(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Max{TSource}(IEnumerable{TSource},Func{TSource,long?})" />
@@ -1171,7 +1171,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max(selector);
+        return (await source.ConfigureAwait(false)).Max(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Max{TSource}(IEnumerable{TSource},Func{TSource,float})" />
@@ -1182,7 +1182,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max(selector);
+        return (await source.ConfigureAwait(false)).Max(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Max{TSource}(IEnumerable{TSource},Func{TSource,float?})" />
@@ -1193,7 +1193,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max(selector);
+        return (await source.ConfigureAwait(false)).Max(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Max{TSource}(IEnumerable{TSource},Func{TSource,double})" />
@@ -1204,7 +1204,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max(selector);
+        return (await source.ConfigureAwait(false)).Max(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Max{TSource}(IEnumerable{TSource},Func{TSource,double?})" />
@@ -1215,7 +1215,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max(selector);
+        return (await source.ConfigureAwait(false)).Max(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Max{TSource}(IEnumerable{TSource},Func{TSource,decimal})" />
@@ -1226,7 +1226,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max(selector);
+        return (await source.ConfigureAwait(false)).Max(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Max{TSource}(IEnumerable{TSource},Func{TSource,decimal?})" />
@@ -1237,7 +1237,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max(selector);
+        return (await source.ConfigureAwait(false)).Max(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Max{TSource,TResult}(IEnumerable{TSource},Func{TSource,TResult})" />
@@ -1248,7 +1248,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Max(selector);
+        return (await source.ConfigureAwait(false)).Max(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Min(IEnumerable{int})" />
@@ -1258,7 +1258,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min();
+        return (await source.ConfigureAwait(false)).Min();
     }
 
     /// <inheritdoc cref="Enumerable.Min(IEnumerable{int})" />
@@ -1268,7 +1268,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min();
+        return (await source.ConfigureAwait(false)).Min();
     }
 
     /// <inheritdoc cref="Enumerable.Min(IEnumerable{int?})" />
@@ -1278,7 +1278,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min();
+        return (await source.ConfigureAwait(false)).Min();
     }
 
     /// <inheritdoc cref="Enumerable.Min(IEnumerable{long?})" />
@@ -1288,7 +1288,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min();
+        return (await source.ConfigureAwait(false)).Min();
     }
 
     /// <inheritdoc cref="Enumerable.Min(IEnumerable{float})" />
@@ -1298,7 +1298,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min();
+        return (await source.ConfigureAwait(false)).Min();
     }
 
     /// <inheritdoc cref="Enumerable.Min(IEnumerable{float?})" />
@@ -1308,7 +1308,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min();
+        return (await source.ConfigureAwait(false)).Min();
     }
 
     /// <inheritdoc cref="Enumerable.Min(IEnumerable{double})" />
@@ -1318,7 +1318,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min();
+        return (await source.ConfigureAwait(false)).Min();
     }
 
     /// <inheritdoc cref="Enumerable.Min(IEnumerable{double?})" />
@@ -1328,7 +1328,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min();
+        return (await source.ConfigureAwait(false)).Min();
     }
 
     /// <inheritdoc cref="Enumerable.Min(IEnumerable{decimal})" />
@@ -1338,7 +1338,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min();
+        return (await source.ConfigureAwait(false)).Min();
     }
 
     /// <inheritdoc cref="Enumerable.Min(IEnumerable{decimal?})" />
@@ -1348,7 +1348,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min();
+        return (await source.ConfigureAwait(false)).Min();
     }
 
     /// <inheritdoc cref="Enumerable.Min{TSource}(IEnumerable{TSource})" />
@@ -1358,7 +1358,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min();
+        return (await source.ConfigureAwait(false)).Min();
     }
 
 #if NET6_0_OR_GREATER
@@ -1370,7 +1370,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min(comparer);
+        return (await source.ConfigureAwait(false)).Min(comparer);
     }
 
     /// <inheritdoc cref="Enumerable.MinBy{TSource,TKey}(IEnumerable{TSource},Func{TSource,TKey})" />
@@ -1381,7 +1381,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).MinBy(keySelector);
+        return (await source.ConfigureAwait(false)).MinBy(keySelector);
     }
 
     /// <inheritdoc cref="Enumerable.MinBy{TSource,TKey}(IEnumerable{TSource},Func{TSource,TKey},IComparer{TKey})" />
@@ -1393,7 +1393,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).MinBy(keySelector, comparer);
+        return (await source.ConfigureAwait(false)).MinBy(keySelector, comparer);
     }
 #endif
 
@@ -1405,7 +1405,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min(selector);
+        return (await source.ConfigureAwait(false)).Min(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Min{TSource}(IEnumerable{TSource},Func{TSource,int?})" />
@@ -1416,7 +1416,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min(selector);
+        return (await source.ConfigureAwait(false)).Min(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Min{TSource}(IEnumerable{TSource},Func{TSource,long})" />
@@ -1427,7 +1427,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min(selector);
+        return (await source.ConfigureAwait(false)).Min(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Min{TSource}(IEnumerable{TSource},Func{TSource,long?})" />
@@ -1438,7 +1438,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min(selector);
+        return (await source.ConfigureAwait(false)).Min(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Min{TSource}(IEnumerable{TSource},Func{TSource,float})" />
@@ -1449,7 +1449,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min(selector);
+        return (await source.ConfigureAwait(false)).Min(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Min{TSource}(IEnumerable{TSource},Func{TSource,float?})" />
@@ -1460,7 +1460,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min(selector);
+        return (await source.ConfigureAwait(false)).Min(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Min{TSource}(IEnumerable{TSource},Func{TSource,double})" />
@@ -1471,7 +1471,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min(selector);
+        return (await source.ConfigureAwait(false)).Min(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Min{TSource}(IEnumerable{TSource},Func{TSource,double?})" />
@@ -1482,7 +1482,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min(selector);
+        return (await source.ConfigureAwait(false)).Min(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Min{TSource}(IEnumerable{TSource},Func{TSource,decimal})" />
@@ -1493,7 +1493,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min(selector);
+        return (await source.ConfigureAwait(false)).Min(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Min{TSource}(IEnumerable{TSource},Func{TSource,decimal?})" />
@@ -1504,7 +1504,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min(selector);
+        return (await source.ConfigureAwait(false)).Min(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Min{TSource,TResult}(IEnumerable{TSource},Func{TSource,TResult})" />
@@ -1515,7 +1515,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Min(selector);
+        return (await source.ConfigureAwait(false)).Min(selector);
     }
 
 #if NET8_0_OR_GREATER
@@ -1526,7 +1526,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Order();
+        return (await source.ConfigureAwait(false)).Order();
     }
 
     /// <inheritdoc cref="Enumerable.Order{T}(IEnumerable{T},IComparer{T})" />
@@ -1537,7 +1537,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Order(comparer);
+        return (await source.ConfigureAwait(false)).Order(comparer);
     }
 #endif
 
@@ -1549,7 +1549,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).OrderBy(keySelector);
+        return (await source.ConfigureAwait(false)).OrderBy(keySelector);
     }
 
     /// <inheritdoc cref="Enumerable.OrderBy{TSource,TKey}(IEnumerable{TSource},Func{TSource,TKey},IComparer{TKey})" />
@@ -1561,7 +1561,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).OrderBy(keySelector, comparer);
+        return (await source.ConfigureAwait(false)).OrderBy(keySelector, comparer);
     }
 
 #if NET8_0_OR_GREATER
@@ -1572,7 +1572,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).OrderDescending();
+        return (await source.ConfigureAwait(false)).OrderDescending();
     }
 
     /// <inheritdoc cref="Enumerable.OrderDescending{T}(IEnumerable{T},IComparer{T})" />
@@ -1583,7 +1583,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).OrderDescending(comparer);
+        return (await source.ConfigureAwait(false)).OrderDescending(comparer);
     }
 #endif
 
@@ -1595,7 +1595,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).OrderByDescending(keySelector);
+        return (await source.ConfigureAwait(false)).OrderByDescending(keySelector);
     }
 
     /// <inheritdoc cref="Enumerable.OrderByDescending{TSource,TKey}(IEnumerable{TSource},Func{TSource,TKey},IComparer{TKey})" />
@@ -1607,7 +1607,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).OrderByDescending(keySelector, comparer);
+        return (await source.ConfigureAwait(false)).OrderByDescending(keySelector, comparer);
     }
 
     /// <inheritdoc cref="Enumerable.Reverse{TSource}(IEnumerable{TSource})" />
@@ -1617,7 +1617,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Reverse();
+        return (await source.ConfigureAwait(false)).Reverse();
     }
 
     /// <inheritdoc cref="Enumerable.Select{TSource,TResult}(IEnumerable{TSource},Func{TSource,TResult})" />
@@ -1628,7 +1628,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Select(selector);
+        return (await source.ConfigureAwait(false)).Select(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Select{TSource,TResult}(IEnumerable{TSource},Func{TSource,int,TResult})" />
@@ -1639,7 +1639,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Select(selector);
+        return (await source.ConfigureAwait(false)).Select(selector);
     }
 
     /// <inheritdoc cref="Enumerable.SelectMany{TSource,TResult}(IEnumerable{TSource},Func{TSource,IEnumerable{TResult}})" />
@@ -1650,7 +1650,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).SelectMany(selector);
+        return (await source.ConfigureAwait(false)).SelectMany(selector);
     }
 
     /// <inheritdoc cref="Enumerable.SelectMany{TSource,TResult}(IEnumerable{TSource},Func{TSource,IEnumerable{TResult}})" />
@@ -1661,7 +1661,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).SelectMany(selector);
+        return (await source.ConfigureAwait(false)).SelectMany(selector);
     }
 
     /// <inheritdoc cref="Enumerable.SelectMany{TSource,TCollection,TResult}(IEnumerable{TSource},Func{TSource,int,IEnumerable{TCollection}},Func{TSource,TCollection,TResult})" />
@@ -1673,7 +1673,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).SelectMany(collectionSelector, resultSelector);
+        return (await source.ConfigureAwait(false)).SelectMany(collectionSelector, resultSelector);
     }
 
     /// <inheritdoc cref="Enumerable.SelectMany{TSource,TCollection,TResult}(IEnumerable{TSource},Func{TSource,IEnumerable{TCollection}},Func{TSource,TCollection,TResult})" />
@@ -1685,7 +1685,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).SelectMany(collectionSelector, resultSelector);
+        return (await source.ConfigureAwait(false)).SelectMany(collectionSelector, resultSelector);
     }
 
     /// <inheritdoc cref="Enumerable.SequenceEqual{TSource}(IEnumerable{TSource},IEnumerable{TSource})" />
@@ -1718,7 +1718,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Single();
+        return (await source.ConfigureAwait(false)).Single();
     }
 
     /// <inheritdoc cref="Enumerable.Single{TSource}(IEnumerable{TSource},Func{TSource,bool})" />
@@ -1729,7 +1729,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Single(predicate);
+        return (await source.ConfigureAwait(false)).Single(predicate);
     }
 
     /// <inheritdoc cref="Enumerable.SingleOrDefault{TSource}(IEnumerable{TSource})" />
@@ -1739,7 +1739,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).SingleOrDefault();
+        return (await source.ConfigureAwait(false)).SingleOrDefault();
     }
 
 #if NET6_0_OR_GREATER
@@ -1751,7 +1751,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).SingleOrDefault(defaultValue);
+        return (await source.ConfigureAwait(false)).SingleOrDefault(defaultValue);
     }
 #endif
 
@@ -1763,7 +1763,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).SingleOrDefault(predicate);
+        return (await source.ConfigureAwait(false)).SingleOrDefault(predicate);
     }
 
 #if NET6_0_OR_GREATER
@@ -1776,7 +1776,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).SingleOrDefault(predicate, defaultValue);
+        return (await source.ConfigureAwait(false)).SingleOrDefault(predicate, defaultValue);
     }
 #endif
 
@@ -1788,7 +1788,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Skip(count);
+        return (await source.ConfigureAwait(false)).Skip(count);
     }
 
     /// <inheritdoc cref="Enumerable.SkipWhile{TSource}(IEnumerable{TSource},Func{TSource,bool})" />
@@ -1799,7 +1799,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).SkipWhile(predicate);
+        return (await source.ConfigureAwait(false)).SkipWhile(predicate);
     }
 
     /// <inheritdoc cref="Enumerable.SkipWhile{TSource}(IEnumerable{TSource},Func{TSource,int,bool})" />
@@ -1810,7 +1810,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).SkipWhile(predicate);
+        return (await source.ConfigureAwait(false)).SkipWhile(predicate);
     }
 
 #if NET6_0_OR_GREATER
@@ -1822,7 +1822,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).SkipLast(count);
+        return (await source.ConfigureAwait(false)).SkipLast(count);
     }
 #endif
 
@@ -1833,7 +1833,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum();
+        return (await source.ConfigureAwait(false)).Sum();
     }
 
     /// <inheritdoc cref="Enumerable.Sum(IEnumerable{long})" />
@@ -1843,7 +1843,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum();
+        return (await source.ConfigureAwait(false)).Sum();
     }
 
     /// <inheritdoc cref="Enumerable.Sum(IEnumerable{float})" />
@@ -1853,7 +1853,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum();
+        return (await source.ConfigureAwait(false)).Sum();
     }
 
     /// <inheritdoc cref="Enumerable.Sum(IEnumerable{double})" />
@@ -1863,7 +1863,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum();
+        return (await source.ConfigureAwait(false)).Sum();
     }
 
     /// <inheritdoc cref="Enumerable.Sum(IEnumerable{decimal})" />
@@ -1873,7 +1873,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum();
+        return (await source.ConfigureAwait(false)).Sum();
     }
 
     /// <inheritdoc cref="Enumerable.Sum(IEnumerable{int?})" />
@@ -1883,7 +1883,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum();
+        return (await source.ConfigureAwait(false)).Sum();
     }
 
     /// <inheritdoc cref="Enumerable.Sum(IEnumerable{long?})" />
@@ -1893,7 +1893,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum();
+        return (await source.ConfigureAwait(false)).Sum();
     }
 
     /// <inheritdoc cref="Enumerable.Sum(IEnumerable{float?})" />
@@ -1903,7 +1903,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum();
+        return (await source.ConfigureAwait(false)).Sum();
     }
 
     /// <inheritdoc cref="Enumerable.Sum(IEnumerable{double?})" />
@@ -1913,7 +1913,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum();
+        return (await source.ConfigureAwait(false)).Sum();
     }
 
     /// <inheritdoc cref="Enumerable.Sum(IEnumerable{decimal?})" />
@@ -1923,7 +1923,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum();
+        return (await source.ConfigureAwait(false)).Sum();
     }
 
     /// <inheritdoc cref="Enumerable.Sum{TSource}(IEnumerable{TSource},Func{TSource,int})" />
@@ -1934,7 +1934,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum(selector);
+        return (await source.ConfigureAwait(false)).Sum(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Sum{TSource}(IEnumerable{TSource},Func{TSource,long})" />
@@ -1945,7 +1945,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum(selector);
+        return (await source.ConfigureAwait(false)).Sum(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Sum{TSource}(IEnumerable{TSource},Func{TSource,float})" />
@@ -1956,7 +1956,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum(selector);
+        return (await source.ConfigureAwait(false)).Sum(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Sum{TSource}(IEnumerable{TSource},Func{TSource,double})" />
@@ -1967,7 +1967,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum(selector);
+        return (await source.ConfigureAwait(false)).Sum(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Sum{TSource}(IEnumerable{TSource},Func{TSource,decimal})" />
@@ -1978,7 +1978,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum(selector);
+        return (await source.ConfigureAwait(false)).Sum(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Sum{TSource}(IEnumerable{TSource},Func{TSource,int?})" />
@@ -1988,7 +1988,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum(selector);
+        return (await source.ConfigureAwait(false)).Sum(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Sum{TSource}(IEnumerable{TSource},Func{TSource,long?})" />
@@ -1999,7 +1999,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum(selector);
+        return (await source.ConfigureAwait(false)).Sum(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Sum{TSource}(IEnumerable{TSource},Func{TSource,float?})" />
@@ -2010,7 +2010,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum(selector);
+        return (await source.ConfigureAwait(false)).Sum(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Sum{TSource}(IEnumerable{TSource},Func{TSource,double?})" />
@@ -2021,7 +2021,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum(selector);
+        return (await source.ConfigureAwait(false)).Sum(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Sum{TSource}(IEnumerable{TSource},Func{TSource,decimal?})" />
@@ -2032,7 +2032,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Sum(selector);
+        return (await source.ConfigureAwait(false)).Sum(selector);
     }
 
     /// <inheritdoc cref="Enumerable.Take{TSource}(IEnumerable{TSource},int)" />
@@ -2043,7 +2043,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Take(count);
+        return (await source.ConfigureAwait(false)).Take(count);
     }
 
 #if NET6_0_OR_GREATER
@@ -2055,7 +2055,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Take(range);
+        return (await source.ConfigureAwait(false)).Take(range);
     }
 #endif
 
@@ -2067,7 +2067,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).TakeWhile(predicate);
+        return (await source.ConfigureAwait(false)).TakeWhile(predicate);
     }
 
     /// <inheritdoc cref="Enumerable.TakeWhile{TSource}(IEnumerable{TSource},Func{TSource,int,bool})" />
@@ -2078,7 +2078,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).TakeWhile(predicate);
+        return (await source.ConfigureAwait(false)).TakeWhile(predicate);
     }
 
 #if NET8_0_OR_GREATER || NETSTANDARD2_1_OR_GREATER
@@ -2090,7 +2090,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).TakeLast(count);
+        return (await source.ConfigureAwait(false)).TakeLast(count);
     }
 #endif
 
@@ -2101,7 +2101,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ToArray();
+        return (await source.ConfigureAwait(false)).ToArray();
     }
 
     /// <inheritdoc cref="Enumerable.ToList{TSource}(IEnumerable{TSource})" />
@@ -2111,7 +2111,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ToList();
+        return (await source.ConfigureAwait(false)).ToList();
     }
 
 #if NET8_0_OR_GREATER
@@ -2123,7 +2123,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ToDictionary();
+        return (await source.ConfigureAwait(false)).ToDictionary();
     }
 
     /// <inheritdoc cref="Enumerable.ToDictionary{TKey,TValue}(IEnumerable{KeyValuePair{TKey,TValue}},IEqualityComparer{TKey}?)" />
@@ -2135,7 +2135,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ToDictionary(comparer);
+        return (await source.ConfigureAwait(false)).ToDictionary(comparer);
     }
 
     /// <inheritdoc cref="Enumerable.ToDictionary{TKey,TValue}(IEnumerable{ValueTuple{TKey,TValue}})" />
@@ -2146,7 +2146,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ToDictionary();
+        return (await source.ConfigureAwait(false)).ToDictionary();
     }
 
     /// <inheritdoc cref="Enumerable.ToDictionary{TKey,TValue}(IEnumerable{ValueTuple{TKey,TValue}},IEqualityComparer{TKey}?)" />
@@ -2158,7 +2158,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ToDictionary(comparer);
+        return (await source.ConfigureAwait(false)).ToDictionary(comparer);
     }
 #endif
 
@@ -2171,7 +2171,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ToDictionary(keySelector);
+        return (await source.ConfigureAwait(false)).ToDictionary(keySelector);
     }
 
     /// <inheritdoc cref="Enumerable.ToDictionary{TSource,TKey}(IEnumerable{TSource},Func{TSource,TKey},IEqualityComparer{TKey})" />
@@ -2184,7 +2184,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ToDictionary(keySelector, comparer);
+        return (await source.ConfigureAwait(false)).ToDictionary(keySelector, comparer);
     }
 
     /// <inheritdoc cref="Enumerable.ToDictionary{TSource,TKey,TElement}(IEnumerable{TSource},Func{TSource,TKey},Func{TSource,TElement})" />
@@ -2197,7 +2197,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ToDictionary(keySelector, elementSelector);
+        return (await source.ConfigureAwait(false)).ToDictionary(keySelector, elementSelector);
     }
 
     /// <inheritdoc cref="Enumerable.ToDictionary{TSource,TKey,TElement}(IEnumerable{TSource},Func{TSource,TKey},Func{TSource,TElement},IEqualityComparer{TKey})" />
@@ -2211,7 +2211,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ToDictionary(keySelector, elementSelector, comparer);
+        return (await source.ConfigureAwait(false)).ToDictionary(keySelector, elementSelector, comparer);
     }
 
 #if NET6_0_OR_GREATER || NETSTANDARD2_1_OR_GREATER
@@ -2222,7 +2222,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ToHashSet();
+        return (await source.ConfigureAwait(false)).ToHashSet();
     }
 
     /// <inheritdoc cref="Enumerable.ToHashSet{TSource}(IEnumerable{TSource},IEqualityComparer{TSource})" />
@@ -2233,7 +2233,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ToHashSet(comparer);
+        return (await source.ConfigureAwait(false)).ToHashSet(comparer);
     }
 #endif
 
@@ -2295,7 +2295,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Where(predicate);
+        return (await source.ConfigureAwait(false)).Where(predicate);
     }
 
     /// <inheritdoc cref="Enumerable.Where{TSource}(IEnumerable{TSource},Func{TSource,int,bool})" />
@@ -2306,7 +2306,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).Where(predicate);
+        return (await source.ConfigureAwait(false)).Where(predicate);
     }
 
     /// <inheritdoc cref="Enumerable.Zip{TFirst,TSecond,TResult}(IEnumerable{TFirst},IEnumerable{TSecond},Func{TFirst,TSecond,TResult})" />

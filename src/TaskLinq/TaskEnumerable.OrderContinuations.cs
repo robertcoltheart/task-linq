@@ -10,7 +10,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ThenBy(keySelector);
+        return (await source.ConfigureAwait(false)).ThenBy(keySelector);
     }
 
     /// <inheritdoc cref="Enumerable.ThenBy{TSource,TKey}(IOrderedEnumerable{TSource},Func{TSource,TKey},IComparer{TKey})" />
@@ -22,7 +22,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ThenBy(keySelector, comparer);
+        return (await source.ConfigureAwait(false)).ThenBy(keySelector, comparer);
     }
 
     /// <inheritdoc cref="Enumerable.ThenByDescending{TSource,TKey}(IOrderedEnumerable{TSource},Func{TSource,TKey})" />
@@ -33,7 +33,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ThenByDescending(keySelector);
+        return (await source.ConfigureAwait(false)).ThenByDescending(keySelector);
     }
 
     /// <inheritdoc cref="Enumerable.ThenByDescending{TSource,TKey}(IOrderedEnumerable{TSource},Func{TSource,TKey},IComparer{TKey})" />
@@ -45,6 +45,6 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).ThenByDescending(keySelector, comparer);
+        return (await source.ConfigureAwait(false)).ThenByDescending(keySelector, comparer);
     }
 }

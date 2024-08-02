@@ -9,7 +9,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return (await source).AsEnumerable();
+        return (await source.ConfigureAwait(false)).AsEnumerable();
     }
 
     /// <inheritdoc cref="Enumerable.AsEnumerable{TSource}(IEnumerable{TSource})" />
@@ -19,7 +19,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return await source;
+        return await source.ConfigureAwait(false);
     }
 
     /// <inheritdoc cref="Enumerable.AsEnumerable{TSource}(IEnumerable{TSource})" />
@@ -29,7 +29,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return await source;
+        return await source.ConfigureAwait(false);
     }
 
     /// <inheritdoc cref="Enumerable.AsEnumerable{TSource}(IEnumerable{TSource})" />
@@ -39,7 +39,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return await source;
+        return await source.ConfigureAwait(false);
     }
 
     /// <inheritdoc cref="Enumerable.AsEnumerable{TSource}(IEnumerable{TSource})" />
@@ -49,7 +49,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return await source;
+        return await source.ConfigureAwait(false);
     }
 
     /// <inheritdoc cref="Enumerable.AsEnumerable{TSource}(IEnumerable{TSource})" />
@@ -59,7 +59,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return await source;
+        return await source.ConfigureAwait(false);
     }
 
     /// <inheritdoc cref="Enumerable.AsEnumerable{TSource}(IEnumerable{TSource})" />
@@ -69,7 +69,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return await source;
+        return await source.ConfigureAwait(false);
     }
 
     /// <inheritdoc cref="Enumerable.AsEnumerable{TSource}(IEnumerable{TSource})" />
@@ -79,7 +79,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return await source;
+        return await source.ConfigureAwait(false);
     }
 
     /// <inheritdoc cref="Enumerable.AsEnumerable{TSource}(IEnumerable{TSource})" />
@@ -89,7 +89,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return await source;
+        return await source.ConfigureAwait(false);
     }
 
     /// <inheritdoc cref="Enumerable.AsEnumerable{TSource}(IEnumerable{TSource})" />
@@ -99,7 +99,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return await source;
+        return await source.ConfigureAwait(false);
     }
 
     /// <inheritdoc cref="Enumerable.AsEnumerable{TSource}(IEnumerable{TSource})" />
@@ -109,7 +109,7 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return await source;
+        return await source.ConfigureAwait(false);
     }
 
     /// <inheritdoc cref="Enumerable.AsEnumerable{TSource}(IEnumerable{TSource})" />
@@ -120,6 +120,6 @@ public static partial class TaskEnumerable
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return await source;
+        return await source.ConfigureAwait(false);
     }
 }
