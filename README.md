@@ -30,7 +30,7 @@ var values = await GetValuesAsync()
     .ToArrayAsync();
 ```
 
-For a custom type inheriting `IEnumerable<T>`, you can use `AsEnumerableAsync` and continue method-chaining:
+For other types inheriting `IEnumerable<T>` such as `HashSet<T>` and `Dictionary<TKey, TValue>`, you can use `AsEnumerableAsync()` and continue method-chaining:
 
 ```csharp
 var values = await GetMyCustomCollection()
