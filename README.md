@@ -1,23 +1,45 @@
 # TaskLinq
 
-[![Docs](https://img.shields.io/badge/docs-wiki-blue.svg?style=for-the-badge)](https://github.com/robertcoltheart/task-linq/wiki) [![NuGet](https://img.shields.io/nuget/v/TaskLinq?style=for-the-badge)](https://www.nuget.org/packages/TaskLinq) [![Discussions](https://img.shields.io/badge/DISCUSS-ON%20GITHUB-yellow?style=for-the-badge)](https://github.com/robertcoltheart/task-linq/discussions) [![License](https://img.shields.io/github/license/robertcoltheart/task-linq?style=for-the-badge)](https://github.com/robertcoltheart/task-linq/blob/master/LICENSE)
+[![NuGet](https://img.shields.io/nuget/v/TaskLinq?style=for-the-badge)](https://www.nuget.org/packages/TaskLinq) [![License](https://img.shields.io/github/license/robertcoltheart/task-linq?style=for-the-badge)](https://github.com/robertcoltheart/task-linq/blob/master/LICENSE)
 
-A thing that does something.
+`TaskLinq` enables you to use method-chaining of LINQ methods when returning enumerable objects from an async method.
+
+`IEnumerable<T>`, `List<T>`, and `T[]` are all supported natively. For other enumerable types, you can call `AsEnumerableAsync()` to continue using the chained methods.
 
 ## Usage
 Install the package from NuGet with `dotnet add package TaskLinq`.
 
+Instead of doing this:
+
 ```csharp
-Example code
+var values = (await GetValuesAsync()).ToArray();
 ```
 
-## Documentation
-See the [wiki](https://github.com/robertcoltheart/task-linq/wiki) for examples and help using TaskLinq.
+you can do this:
+
+```csharp
+var values = await GetValuesAsync().ToArrayAsync();
+```
+
+You can also chain LINQ methods together and `await` the entire chain:
+
+```csharp
+var values = await GetValuesAsync()
+    .WhereAsync(x => x > 1)
+    .OrderByAsync(x => x)
+    .ToArrayAsync();
+```
+
+For a custom type inheriting `IEnumerable<T>`, you can use `AsEnumerableAsync` and continue method-chaining:
+
+```csharp
+var values = await GetMyCustomCollection()
+    .AsEnumerableAsync()
+    .ToArrayAsync();
+```
 
 ## Get in touch
-Discuss with us on [Discussions](https://github.com/robertcoltheart/task-linq/discussions), or raise an [issue](https://github.com/robertcoltheart/task-linq/issues).
-
-[![Discussions](https://img.shields.io/badge/DISCUSS-ON%20GITHUB-yellow?style=for-the-badge)](https://github.com/robertcoltheart/task-linq/discussions)
+Raise an [issue](https://github.com/robertcoltheart/task-linq/issues).
 
 ## Contributing
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this project.

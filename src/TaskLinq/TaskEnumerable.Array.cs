@@ -1812,7 +1812,7 @@ public static partial class TaskEnumerable
         return (await source.ConfigureAwait(false)).SkipWhile(predicate);
     }
 
-#if NET6_0_OR_GREATER
+#if NET6_0_OR_GREATER || NETSTANDARD2_1_OR_GREATER
     /// <inheritdoc cref="Enumerable.SkipLast{TSource}(IEnumerable{TSource},int)" />
     public static async Task<IEnumerable<TSource>> SkipLastAsync<TSource>(
         this Task<TSource[]> source,
@@ -2080,7 +2080,7 @@ public static partial class TaskEnumerable
         return (await source.ConfigureAwait(false)).TakeWhile(predicate);
     }
 
-#if NET8_0_OR_GREATER || NETSTANDARD2_1_OR_GREATER
+#if NET6_0_OR_GREATER || NETSTANDARD2_1_OR_GREATER
     /// <inheritdoc cref="Enumerable.TakeLast{TSource}(IEnumerable{TSource},int)" />
     public static async Task<IEnumerable<TSource>> TakeLastAsync<TSource>(
         this Task<TSource[]> source,
@@ -2259,7 +2259,7 @@ public static partial class TaskEnumerable
         return (await first).Union(second, comparer);
     }
 
-#if NET8_0_OR_GREATER
+#if NET6_0_OR_GREATER
     /// <inheritdoc cref="Enumerable.UnionBy{TSource,TKey}(IEnumerable{TSource},IEnumerable{TSource},Func{TSource,TKey})" />
     public static async Task<IEnumerable<TSource>> UnionByAsync<TSource, TKey>(
         this Task<TSource[]> first,

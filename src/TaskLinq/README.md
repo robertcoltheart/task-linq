@@ -1,21 +1,37 @@
-﻿## About
+﻿# TaskLinq
 
-A thing that does something.
+`TaskLinq` enables you to use method-chaining of LINQ methods when returning enumerable objects from an async method.
+
+`IEnumerable<T>`, `List<T>`, and `T[]` are all supported natively. For other enumerable types, you can call `AsEnumerableAsync()` to continue using the chained methods.
 
 ## Usage
 Install the package from NuGet with `dotnet add package TaskLinq`.
 
+Instead of doing this:
+
 ```csharp
-Example code
+var values = (await GetValuesAsync()).ToArray();
 ```
 
-## Documentation
-See the [wiki](https://github.com/robertcoltheart/task-linq/wiki) for examples and help using TaskLinq.
+you can do this:
 
-## Get in touch
-Discuss with us on [Discussions](https://github.com/robertcoltheart/task-linq/discussions), or raise an [issue](https://github.com/robertcoltheart/task-linq/issues).
+```csharp
+var values = await GetValuesAsync().ToArrayAsync();
+```
 
-[![Discussions](https://img.shields.io/badge/DISCUSS-ON%20GITHUB-yellow?style=for-the-badge)](https://github.com/robertcoltheart/task-linq/discussions)
+You can also chain LINQ methods together and `await` the entire chain:
 
-## Contributing
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this project.
+```csharp
+var values = await GetValuesAsync()
+    .WhereAsync(x => x > 1)
+    .OrderByAsync(x => x)
+    .ToArrayAsync();
+```
+
+For a custom type inheriting `IEnumerable<T>`, you can use `AsEnumerableAsync` and continue method-chaining:
+
+```csharp
+var values = await GetMyCustomCollection()
+    .AsEnumerableAsync()
+    .ToArrayAsync();
+```
